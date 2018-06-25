@@ -223,3 +223,62 @@ body{
 		}
 	}
 }
+.Mejores{
+	padding: 3em 4em 5em;
+	& .title{
+		font-family: var(--fuenteTitle);
+		color: var(--masOscuro);
+		font-size: 2rem;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	& .contenedor{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 2em;
+		margin-top: 5em;
+		& > .item{
+			overflow: hidden;
+			border-radius: 1em;
+			box-shadow: 5px 6px 20px 5px #f3f3f3;
+			text-decoration: none;
+			& .header{
+				& img{
+					width: 100%;
+				}
+			}
+			& .body{
+				padding: 2em 2em;
+				& .subtitle{
+					margin: 0;
+					font-family: var(--fuenteSubTitle);
+					font-size: 1.2rem;
+					color: var(--masOscuro);
+				}
+				& .profesor{
+					color: var(--claro);
+				}
+				& .descripcion{
+					color: var(--masOscuro);
+				}
+				& .caracteristicas{
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					display: flex;
+					width: 100%;
+					justify-content: space-between;
+					& .item{
+						color: var(--gris);
+						& span{
+							&:nth-of-type(1){
+								margin-right: .5em;
+							}
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
