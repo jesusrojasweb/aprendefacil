@@ -1,5 +1,97 @@
+:root{
+	--fuenteTitle: 'Fredoka One', system-ui;
+	--fuenteSubTitle: 'Ubuntu', system-ui;
+	--fuenteText: 'Montserrat', system-ui;
+
+	--azul: #00acff;
+	--verde: #89da59;
+	--naranja: #fc8403;
+	--oscuro: #fc8403;
+	--gris: #9e9e9e;
+	--masOscuro: #091c23;
+	--claro: #afafaf;
+
+	--btn:{
+		color: white;
+		background: var(--azul);
+		border-radius: 2em;
+		padding: 1em 2em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+};
+
 body{
 	font-family: 'Fredoka One', system-ui;
 	font-family: 'Ubuntu', system-ui;
 	font-family: 'Montserrat', system-ui;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+.Hero{
+	background: url('../img/bg.jpg') center center no-repeat;
+	background-size: cover;
+	& .contenedor{
+		background: color(black a(50%));
+	}
+	& .header{
+		& .navbar{
+			padding: 1em 2em;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			& .logo{
+				margin: 0;
+				padding: 0;
+				width: 10%;
+				& .img{
+					width: 100%;
+				}
+			}
+			& .menu{
+				display: flex;
+				list-style: none;
+				& .item{
+					& a{
+						text-decoration: none;
+						padding: 1em;
+						text-transform: uppercase;
+						color: white;
+					}
+				}
+			}
+			& .btn{
+				@apply --btn;
+			}
+		}
+	}
+	& .copy{
+		text-align: center;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 85vh;
+		box-sizing: border-box;
+		padding-bottom: 5em;
+		& .title{
+			font-size: 3rem;
+			font-family: var(--fuenteTitle);
+			text-transform: uppercase;
+			margin-bottom: .4em;
+		}
+		& .call{
+			font-size: 1.2em;
+			width: 60%;
+			margin-bottom: 2em;
+		}
+		& .btn{
+			@apply --btn;
+			font-size: 1.2rem;
+		}
+	}
 }

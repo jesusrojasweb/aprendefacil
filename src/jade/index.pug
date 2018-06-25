@@ -7,24 +7,26 @@ head
 	link(rel="stylesheet", href="css/estilos.css")
 body
 	section.Hero
-		header.header
-			nav.navbar
-				figure.logo
-					img.img(src="img/logo.png", alt="logo")
-				ul.menu
-					li.item
-						a(href="/") Inicio
-					li.item
-						a(href="clases.html") Clases
-					li.item
-						a(href="#") Blog
-					li.item
-						a(href="contacto.html") Contacto
-				a.btn(href="#") Iniciar Sesión
-		.copy
-			h1.title Aprende sin importar nada
-			p.call Si quieres impulsar tu carrera o tu vida personal entonces estas en el lugar correcto. Aprende para poder seguir adelante.
-			a.btn(href="#") Empieza ahora
+		.contenedor
+			header.header
+				nav.navbar
+					figure.logo
+						img.img(src="img/logo.png", alt="logo")
+					ul.menu
+						li.item
+							a(href="/") Inicio
+						li.item
+							a(href="clases.html") Clases
+						li.item
+							a(href="#") Blog
+						li.item
+							a(href="contacto.html") Contacto
+					.boton
+						a.btn(href="#") Iniciar Sesión
+			.copy
+				h1.title Aprende sin importar nada
+				p.call Si quieres impulsar tu carrera o tu vida personal entonces estas en el lugar correcto. Aprende para poder seguir adelante.
+				a.btn(href="#") Empieza ahora
 	section.Servicios
 		.elegir
 			select
@@ -89,7 +91,7 @@ body
 		.contenedor
 			.item
 				.header
-					img(src="", alt="clase")
+					img(src="img/curso-01.jpg", alt="clase")
 				.body
 					h4.subtitle Titulo del curso
 					span.profesor Nombre Profesor
@@ -106,7 +108,7 @@ body
 							span.tipo Nivel
 			.item
 				.header
-					img(src="", alt="clase")
+					img(src="img/curso-02.jpg", alt="clase")
 				.body
 					h4.subtitle Titulo del curso
 					span.profesor Nombre Profesor
@@ -123,7 +125,7 @@ body
 							span.tipo Nivel
 			.item
 				.header
-					img(src="", alt="clase")
+					img(src="img/curso-03.jpg", alt="clase")
 				.body
 					h4.subtitle Titulo del curso
 					span.profesor Nombre Profesor
@@ -141,7 +143,7 @@ body
 	footer.footer
 		.body
 			.item
-				img.img(src="", alt="logo")
+				img.img(src="img/logo-expand.png", alt="logo")
 				p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla quia architecto esse optio doloremque similique, sapiente aliquam! Esse sint, facere quo repudiandae consequatur perferendis porro qui ipsum alias fugit cupiditate!
 			.item
 				h3.title Más Información
