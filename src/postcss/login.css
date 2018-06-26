@@ -107,7 +107,7 @@ body{
 				& button{
 					background: none;
 					border: none;
-					color: white;
+					color: var(--gris);
 					font-size: 2rem;
 				}
 			}
@@ -116,12 +116,24 @@ body{
 }
 .Inicio{
 	display: flex;
+	@media(--tablet){
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: "sesion"
+							 "registro";
+	}
 	& .crear{
 		background: url('../img/bg-login.jpg') 0% 50% no-repeat;
 		background-size: contain;
 		width: 60%;
 		background-attachment: fixed;
 		clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+		@media (--tablet) {
+			width: 100%;
+			clip-path: none;
+			background-position: center;
+			background-size: cover;
+		}
 		& .contenedor{
 			width: 100%;
 			height: 100%;
@@ -129,6 +141,9 @@ body{
 			padding: 10em 5em;
 			box-sizing: border-box;
 			color: white;
+			@media (--mobile) {
+				padding: 10em 2em;
+			}
 			& .title{
 				margin-top: 0;
 				font-family: var(--fuenteTitle);
@@ -157,6 +172,13 @@ body{
 		box-sizing: border-box;
 		width: 50%;
 		text-align: center;
+		@media (--tablet) {
+			width: 100%;
+			grid-area: sesion;
+		}
+		@media (--mobile) {
+			padding: 10em 2em;
+		}
 		& .title{
 			font-family: var(--fuenteTitle);
 			font-size: 2rem;
