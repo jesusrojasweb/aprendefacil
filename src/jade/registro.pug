@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Registrar
+	meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+	link(rel="stylesheet", href="css/fontawesome-all.min.css")
+	link(rel="stylesheet", href="css/registro.css")
+body
+	header.header
+		nav.navbar
+			figure.logo
+				img.img(src="img/logo.png", alt="logo")
+			ul.menu#menu
+				li.item
+					a(href="/") Inicio
+				li.item
+					a(href="clases.html") Clases
+				li.item
+					a(href="#") Blog
+				li.item
+					a(href="contacto.html") Contacto
+			.boton
+				a.btn(href="#") Registrarme
+			.burger
+				button.fa.fa-bars#button
+	section.Registro
+		.iniciar
+			.contenedor
+				h1.title Si ya estas registrado
+				p.call Inicia sesión y disfruta de nuestros servicios cuando quieras.
+				a.btn(href="login.html") Iniciar Sesión
+		.registro
+			h1.title Registrate
+			form.formulario
+				input#nombre(type="text", name="nombre",placeholder="Nombre y apellido").input
+				input#email.input(type="email", name="email", placeholder="email@mail.com")
+				input#clave.input(type="password", name="clave", placeholder="Contraseña")
+				input.btn(type="submit", value="Crear Cuenta")
+	footer.footer
+		.body
+			.item
+				img.img(src="img/logo-expand.png", alt="logo")
+				p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla quia architecto esse optio doloremque similique
+			.item
+				h3.title Más Información
+				ul.info
+					li.item
+						a(href="#") Contacto
+					li.item
+						a(href="#") Blog
+					li.item
+						a(href="#") Crear Cuenta
+					li.item
+						a(href="#") Iniciar Sesión
+			.item
+				h3.title Sociales
+				ul.social
+					li.item
+						a(href="#")
+							span.fab.fa-facebook
+					li.item
+						a(href="#")
+							span.fab.fa-twitter
+					li.item
+						a(href="#")
+							span.fab.fa-instagram
+		.copy
+			p!= "&copy; Copyright 2018. diseño y Desarollo por <a href='http://jesusrojas.com.ve' target='_blank'>Jesús Rojas<a>"
