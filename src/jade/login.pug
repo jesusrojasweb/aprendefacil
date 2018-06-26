@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Iniciar Sesión
+	meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+	link(rel="stylesheet", href="css/fontawesome-all.min.css")
+	link(rel="stylesheet", href="css/login.css")
+body
+	header.header
+		nav.navbar
+			figure.logo
+				img.img(src="img/logo.png", alt="logo")
+			ul.menu#menu
+				li.item
+					a(href="/") Inicio
+				li.item
+					a(href="clases.html") Clases
+				li.item
+					a(href="#") Blog
+				li.item
+					a(href="contacto.html") Contacto
+			.boton
+				a.btn(href="#") Registrarme
+			.burger
+				button.fa.fa-bars#button
+	section.Inicio
+		.crear
+			.contenedor
+				h1.title Si aun no estas registrado
+				p.call Create una cuenta para formarte todo el tiempo
+				ul.ventajas
+					li Estudia lo que quieras
+					li Cuando Quieras
+					li Donde quieras
+					li Como quieras
+				a.btn(href="#") Crear cuenta
+		.sesion
+			h1.title Bienvenido a aprende facil
+			p.call Si quieres tener educación sin importar donde estes; este es el lugar correcto.
+			form.formulario
+				input(type="email", name="email", placeholder="email@mail.com")#email.input
+				input#clave(type="password", name="clave", placeholder="Contraseña").input
+				input(type="submit", value="Iniciar Sesión")
+	footer.footer
+		.body
+			.item
+				img.img(src="img/logo-expand.png", alt="logo")
+				p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla quia architecto esse optio doloremque similique
+			.item
+				h3.title Más Información
+				ul.info
+					li.item
+						a(href="#") Contacto
+					li.item
+						a(href="#") Blog
+					li.item
+						a(href="#") Crear Cuenta
+					li.item
+						a(href="#") Iniciar Sesión
+			.item
+				h3.title Sociales
+				ul.social
+					li.item
+						a(href="#")
+							span.fab.fa-facebook
+					li.item
+						a(href="#")
+							span.fab.fa-twitter
+					li.item
+						a(href="#")
+							span.fab.fa-instagram
+		.copy
+			p!= "&copy; Copyright 2018. diseño y Desarollo por <a href='http://jesusrojas.com.ve' target='_blank'>Jesús Rojas<a>"
