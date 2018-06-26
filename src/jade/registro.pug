@@ -21,15 +21,10 @@ body
 				li.item
 					a(href="contacto.html") Contacto
 			.boton
-				a.btn(href="#") Registrarme
+				a.btn(href="/login.html") Iniciar Sesión
 			.burger
 				button.fa.fa-bars#button
 	section.Registro
-		.iniciar
-			.contenedor
-				h1.title Si ya estas registrado
-				p.call Inicia sesión y disfruta de nuestros servicios cuando quieras.
-				a.btn(href="login.html") Iniciar Sesión
 		.registro
 			h1.title Registrate
 			form.formulario
@@ -37,6 +32,11 @@ body
 				input#email.input(type="email", name="email", placeholder="email@mail.com")
 				input#clave.input(type="password", name="clave", placeholder="Contraseña")
 				input.btn(type="submit", value="Crear Cuenta")
+		.iniciar
+			.contenedor
+				h1.title Si ya estas registrado
+				p.call Inicia sesión y disfruta de nuestros servicios cuando quieras.
+				a.btn(href="login.html") Iniciar Sesión
 	footer.footer
 		.body
 			.item
