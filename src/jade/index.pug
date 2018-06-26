@@ -7,24 +7,26 @@ head
 	link(rel="stylesheet", href="css/estilos.css")
 body
 	section.Hero
-		header.header
-			nav.navbar
-				figure.logo
-					img.img(src="img/logo.png", alt="logo")
-				ul.menu
-					li.item
-						a(href="/") Inicio
-					li.item
-						a(href="clases.html") Clases
-					li.item
-						a(href="#") Blog
-					li.item
-						a(href="contacto.html") Contacto
-				a.btn(href="#") Iniciar Sesión
-		.copy
-			h1.title Aprende sin importar nada
-			p.call Si quieres impulsar tu carrera o tu vida personal entonces estas en el lugar correcto. Aprende para poder seguir adelante.
-			a.btn(href="#") Empieza ahora
+		.contenedor
+			header.header
+				nav.navbar
+					figure.logo
+						img.img(src="img/logo.png", alt="logo")
+					ul.menu
+						li.item
+							a(href="/") Inicio
+						li.item
+							a(href="clases.html") Clases
+						li.item
+							a(href="#") Blog
+						li.item
+							a(href="contacto.html") Contacto
+					.boton
+						a.btn(href="#") Iniciar Sesión
+			.copy
+				h1.title Aprende sin importar nada
+				p.call Si quieres impulsar tu carrera o tu vida personal entonces estas en el lugar correcto. Aprende para poder seguir adelante.
+				a.btn(href="#") Empieza ahora
 	section.Servicios
 		.elegir
 			select
@@ -87,13 +89,13 @@ body
 	section.Mejores
 		h2.title Las mejores clases
 		.contenedor
-			.item
+			a.item(href="#")
 				.header
-					img(src="", alt="clase")
+					img(src="img/curso-01.jpg", alt="clase")
 				.body
 					h4.subtitle Titulo del curso
 					span.profesor Nombre Profesor
-					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum debitis magnam praesentium sunt repellendus aut deserunt dolorem, provident placeat ullam eius odit, beatae, consequatur architecto libero asperiores eum eveniet. Placeat.
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum debitis magnam praesentium sunt.
 					ul.caracteristicas
 						li.item
 							span.icono.fas.fa-file
@@ -104,13 +106,13 @@ body
 						li.item
 							span.icono.fas.fa-sitemap
 							span.tipo Nivel
-			.item
+			a.item(href="#")
 				.header
-					img(src="", alt="clase")
+					img(src="img/curso-02.jpg", alt="clase")
 				.body
 					h4.subtitle Titulo del curso
 					span.profesor Nombre Profesor
-					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum debitis magnam praesentium sunt repellendus aut deserunt dolorem, provident placeat ullam eius odit, beatae, consequatur architecto libero asperiores eum eveniet. Placeat.
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum debitis magnam praesentium sunt.asperiores eum eveniet. Placeat.
 					ul.caracteristicas
 						li.item
 							span.icono.fas.fa-file
@@ -121,13 +123,13 @@ body
 						li.item
 							span.icono.fas.fa-sitemap
 							span.tipo Nivel
-			.item
+			a.item(href="#")
 				.header
-					img(src="", alt="clase")
+					img(src="img/curso-03.jpg", alt="clase")
 				.body
 					h4.subtitle Titulo del curso
 					span.profesor Nombre Profesor
-					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum debitis magnam praesentium sunt repellendus aut deserunt dolorem, provident placeat ullam eius odit, beatae, consequatur architecto libero asperiores eum eveniet. Placeat.
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum debitis magnam praesentium sunt.
 					ul.caracteristicas
 						li.item
 							span.icono.fas.fa-file
@@ -141,8 +143,8 @@ body
 	footer.footer
 		.body
 			.item
-				img.img(src="", alt="logo")
-				p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla quia architecto esse optio doloremque similique, sapiente aliquam! Esse sint, facere quo repudiandae consequatur perferendis porro qui ipsum alias fugit cupiditate!
+				img.img(src="img/logo-expand.png", alt="logo")
+				p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla quia architecto esse optio doloremque similique
 			.item
 				h3.title Más Información
 				ul.info
@@ -153,7 +155,7 @@ body
 					li.item
 						a(href="#") Crear Cuenta
 					li.item
-						a(href="#") Iniciar SEsión
+						a(href="#") Iniciar Sesión
 			.item
 				h3.title Sociales
 				ul.social
