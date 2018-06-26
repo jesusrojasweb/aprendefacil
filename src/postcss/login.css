@@ -1,0 +1,112 @@
+@import 'estilos.css';
+:root{
+	--fuenteTitle: 'Fredoka One', system-ui;
+	--fuenteSubTitle: 'Ubuntu', system-ui;
+	--fuenteText: 'Montserrat', system-ui;
+
+	--azul: #00acff;
+	--verde: #89da59;
+	--naranja: #fc8403;
+	--oscuro: #0d242f;
+	--gris: #9e9e9e;
+	--masOscuro: #091c23;
+	--claro: #afafaf;
+
+	--btn:{
+		color: white;
+		background: var(--azul);
+		border-radius: 2em;
+		padding: 1em 2em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+};
+.header{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	& .navbar{
+		padding: 1em 4em;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media(--mobile){
+			padding: 1em 2em;
+		}
+		& .logo{
+			margin: 0;
+			padding: 0;
+			width: 10%;
+			@media(--tablet){
+				width: 20%;
+			}
+			@media(--tablet){
+				width: 25%;
+			}
+			& .img{
+				width: 100%;
+			}
+		}
+		& .menu{
+			display: flex;
+			list-style: none;
+			@media(--tablet){
+				position: fixed;
+				background: color(var(--verde) a(60%));
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				display: none;
+				margin: 0;
+				padding: 0;
+				z-index: 1000;
+				&.active{
+					display: flex;
+					transform: translateX(0%);
+				}
+				& .item{
+					margin-bottom: 2em;
+					& a{
+						font-size: 2rem;
+						color: black;
+						font-weight: 600;
+					}
+				}
+			}
+			& .item{
+				& a{
+					text-decoration: none;
+					padding: 1em;
+					text-transform: uppercase;
+					color: white;
+				}
+			}
+		}
+		& .btn{
+			@apply --btn;
+			@media (--mobile){
+				font-size: .7rem;
+			}
+		}
+		& .burger{
+			display: none;
+			z-index: 1001;
+			@media(--tablet){
+				display: block;
+				& button{
+					background: none;
+					border: none;
+					color: white;
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
