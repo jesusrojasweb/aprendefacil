@@ -141,6 +141,9 @@ body{
 			padding: 10em 5em;
 			box-sizing: border-box;
 			color: white;
+			@media (--mobile) {
+				padding: 10em 2em;
+			}
 			& .title{
 				margin-top: 0;
 				font-family: var(--fuenteTitle);
@@ -172,6 +175,9 @@ body{
 		@media (--tablet) {
 			width: 100%;
 			grid-area: sesion;
+		}
+		@media (--mobile) {
+			padding: 10em 2em;
 		}
 		& .title{
 			font-family: var(--fuenteTitle);
