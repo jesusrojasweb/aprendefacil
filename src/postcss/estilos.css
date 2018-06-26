@@ -22,7 +22,8 @@
 	}
 
 };
-
+@custom-media --tablet (width < 800px);
+@custom-media --mobile (width < 500px);
 body{
 	font-family: 'Fredoka One', system-ui;
 	font-family: 'Ubuntu', system-ui;
@@ -34,6 +35,7 @@ body{
 .Hero{
 	background: url('../img/bg.jpg') center center no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 	& .contenedor{
 		background: color(black a(50%));
 	}
@@ -43,10 +45,19 @@ body{
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			@media(--mobile){
+				padding: 1em 2em;
+			}
 			& .logo{
 				margin: 0;
 				padding: 0;
 				width: 10%;
+				@media(--tablet){
+					width: 20%;
+				}
+				@media(--tablet){
+					width: 25%;
+				}
 				& .img{
 					width: 100%;
 				}
@@ -54,6 +65,28 @@ body{
 			& .menu{
 				display: flex;
 				list-style: none;
+				@media(--tablet){
+					position: fixed;
+					background: color(var(--verde) a(60%));
+					width: 100%;
+					height: 100%;
+					left: 0;
+					top: 0;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					display: none;
+					margin: 0;
+					padding: 0;
+					& .item{
+						margin-bottom: 2em;
+						& a{
+							font-size: 2rem;
+							color: black;
+							font-weight: 600;
+						}
+					}
+				}
 				& .item{
 					& a{
 						text-decoration: none;
@@ -65,6 +98,21 @@ body{
 			}
 			& .btn{
 				@apply --btn;
+				@media (--mobile){
+					font-size: .7rem;
+				}
+			}
+			& .burger{
+				display: none;
+				@media(--tablet){
+					display: block;
+					& button{
+						background: none;
+						border: none;
+						color: white;
+						font-size: 2rem;
+					}
+				}
 			}
 		}
 	}
@@ -78,16 +126,33 @@ body{
 		height: 85vh;
 		box-sizing: border-box;
 		padding-bottom: 5em;
+		@media(--tablet){
+			padding: 0 4em;
+			padding-bottom: 8em;
+		}
+		@media(--tablet){
+			padding: 0 2em;
+			padding-bottom: 8em;
+		}
 		& .title{
 			font-size: 3rem;
 			font-family: var(--fuenteTitle);
 			text-transform: uppercase;
 			margin-bottom: .4em;
+			@media(--mobile){
+				font-size: 2.2rem;
+			}
 		}
 		& .call{
 			font-size: 1.2em;
 			width: 60%;
 			margin-bottom: 2em;
+			@media(--tablet){
+				width: 90%;
+			}
+			@media(--mobile){
+				font-size: 1em;
+			}
 		}
 		& .btn{
 			@apply --btn;
@@ -108,6 +173,15 @@ body{
 		padding: 2em 4em;
 		box-sizing: border-box;
 		border-radius: 5px;
+		@media(--tablet){
+			width: 90%;
+			& select{
+				padding: 1em;
+			}
+		}
+		@media(--mobile){
+			display: none;
+		}
 		& select{
 			border: none;
 			background: #e5f7ff;
@@ -129,6 +203,9 @@ body{
 		grid-gap: 2em;
 		width: 90%;
 		margin: 5em auto 0;
+		@media(--tablet){
+			grid-template-columns: repeat(2,1fr);
+		}
 		& .item{
 			transition: .3s;
 			border-radius: 5px;
@@ -176,6 +253,9 @@ body{
 	background: var(--verde);
 	padding: 4em 5em 6em;
 	color: white;
+	@media(--mobile){
+		padding: 4em 2em;
+	}
 	& .title{
 		text-align: center;
 		font-family: var(--fuenteTitle);
@@ -186,6 +266,9 @@ body{
 		margin-top: 5em;
 		display: grid;
 		grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+		@media(--mobile){
+			grid-template-columns: 1fr;
+		}
 		& .item{
 			display: grid;
 			grid-template-columns: repeat(5,1fr);
@@ -220,6 +303,13 @@ body{
 					grid-column: 2/5;
 				}
 			}
+			@media(--mobile){
+				grid-column: 1/2 !important;
+				text-align: center;
+				& .icono,& .subtitle{
+					grid-column: 2/5;
+				}
+			}
 		}
 	}
 }
@@ -237,6 +327,12 @@ body{
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 2em;
 		margin-top: 5em;
+		@media(--tablet){
+			grid-template-columns: 1fr 1fr;
+		}
+		@media(--mobile){
+			grid-template-columns: 1fr !important;
+		}
 		& > .item{
 			overflow: hidden;
 			border-radius: 1em;
@@ -289,6 +385,13 @@ body{
 		display: grid;
 		grid-template-columns: repeat(3,1fr);
 		justify-items: center;
+		@media(--tablet){
+			grid-gap: 2em;
+		}
+		@media(--tablet){
+			grid-template-columns: 1fr;
+			justify-items: start;
+		}
 		& .item{
 			& .img{
 				width: 100%;
@@ -297,6 +400,9 @@ body{
 				color: var(--naranja);
 				font-family: var(--fuenteTitle);
 				font-size: 1.8rem;
+				@media(--tablet){
+					font-size: 1.5rem;
+				}
 			}
 			& .descripcion{
 				color: var(--claro);
