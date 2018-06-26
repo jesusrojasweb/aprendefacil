@@ -31,6 +31,71 @@ body{
 	margin: 0;
 	overflow-x: hidden;
 }
+.load{
+	width: 100%;
+	height: 250px;
+	background: var(--verde);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	@media(--tablet){
+		height: 200px;
+	}
+	@media(--mobile){
+		height: 180px !important;
+	}
+
+	& .loader{
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		overflow: hidden;
+		position: absolute;
+		z-index: 1;
+		& .circulo{
+			width: 100%;
+			height: 100%;
+			border: 8px solid color(var(--azul) a(80%));
+			border-radius: 50%;
+			position: absolute;
+			box-sizing: border-box;
+		}
+		& .movimiento{
+			clip: rect(0px, 80px, 40px, 40px);
+			width: 100%;
+			height: 100%;
+			border: 8px solid white;
+			border-radius: 50%;
+			position: absolute;
+			box-sizing: border-box;
+			transform: rotate(-45deg);
+			animation: rotar 1s ease-in-out infinite;
+		}
+	}
+}
+.b-lazy{
+	opacity: 0;
+}
+.b-loaded{
+	opacity: 1;
+	animation: aparecer 1s ease-out;
+	z-index: 1;
+	transition: .3s;
+}
+@keyframes rotar{
+	0%{
+		transform: rotate(-45deg);
+	}
+	100%{
+		transform: rotate(315deg);
+	}
+}
+/*.Mejores{
+	& img{
+		display: none;
+	}
+}*/
 
 .Hero{
 	background: url('../img/bg.jpg') center center no-repeat;
@@ -211,6 +276,9 @@ body{
 		margin: 5em auto 0;
 		@media(--tablet){
 			grid-template-columns: repeat(2,1fr);
+		}
+		@media(--mobile){
+			grid-template-columns: 1fr !important;
 		}
 		& .item{
 			transition: .3s;
