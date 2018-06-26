@@ -39,30 +39,7 @@ gulp.task('css', (e)=>{
     mqpacker(),
     cssnano()
   ]
-  return gulp.src('./src/postcss/estilos.css')
-    //.pipe(sourcemaps.init())
-    .pipe(postcss(processor))
-    .pipe(gulp.dest('./css'))
-    .pipe(browserSync.stream())
-})
-gulp.task('info', (e)=>{
-
-  const processor = [
-    atImport(),
-    fontMagician({
-      variants: {
-          'Lato': {
-            '400': [],
-            '700': []
-          }
-        }
-      }),
-    //cssnested,
-    cssnext({browsers: ['> 5%', 'ie 8']}),
-    mqpacker(),
-    cssnano()
-  ]
-  return gulp.src('./src/postcss/info.css')
+  return gulp.src('./src/postcss/*.css')
     //.pipe(sourcemaps.init())
     .pipe(postcss(processor))
     .pipe(gulp.dest('./css'))
@@ -72,7 +49,6 @@ gulp.task('info', (e)=>{
 // Tarea para vigilar los cambios
 gulp.task('watch', ()=>{
   gulp.watch('./src/postcss/*.css', ['css'])
-	gulp.watch('./src/postcss/info.css', ['info'])
   gulp.watch('./*.html').on('change', browserSync.reload)
   gulp.watch('./src/jade/*.pug', ['pug'])
 	gulp.watch('./js/*.js').on('change', browserSync.reload)
