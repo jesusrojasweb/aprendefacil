@@ -44,6 +44,7 @@ body > .header{
 	& .logo{
 		width: 20%;
 		text-align: center;
+		margin: 1em;
 		& .img{
 			width: 50%;
 		}
