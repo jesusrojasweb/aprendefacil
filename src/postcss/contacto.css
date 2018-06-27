@@ -1,0 +1,244 @@
+@import 'estilos.css';
+:root{
+	--fuenteTitle: 'Fredoka One', system-ui;
+	--fuenteSubTitle: 'Ubuntu', system-ui;
+	--fuenteText: 'Montserrat', system-ui;
+
+	--azul: #00acff;
+	--verde: #89da59;
+	--naranja: #fc8403;
+	--oscuro: #0d242f;
+	--gris: #9e9e9e;
+	--masOscuro: #091c23;
+	--claro: #afafaf;
+
+	--btn:{
+		color: white;
+		background: var(--azul);
+		border-radius: 2em;
+		padding: 1em 2em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+};
+body{
+	position: relative;
+}
+.header{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+	& .navbar{
+		padding: 1em 4em;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media(--mobile){
+			padding: 1em 2em;
+		}
+		& .logo{
+			margin: 0;
+			padding: 0;
+			width: 10%;
+			@media(--tablet){
+				width: 20%;
+			}
+			@media(--tablet){
+				width: 25%;
+			}
+			& .img{
+				width: 100%;
+			}
+		}
+		& .menu{
+			display: flex;
+			list-style: none;
+			@media(--tablet){
+				position: fixed;
+				background: color(var(--verde) a(60%));
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				display: none;
+				margin: 0;
+				padding: 0;
+				z-index: 1000;
+				&.active{
+					display: flex;
+					transform: translateX(0%);
+				}
+				& .item{
+					margin-bottom: 2em;
+					& a{
+						font-size: 2rem;
+						color: black;
+						font-weight: 600;
+					}
+				}
+			}
+			& .item{
+				& a{
+					text-decoration: none;
+					padding: 1em;
+					text-transform: uppercase;
+					color: var(--gris);
+				}
+			}
+		}
+		& .btn{
+			@apply --btn;
+			@media (--mobile){
+				font-size: .7rem;
+			}
+		}
+		& .burger{
+			display: none;
+			z-index: 1001;
+			@media(--tablet){
+				display: block;
+				& button{
+					background: none;
+					border: none;
+					color: var(--gris);
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
+.Contactate{
+	padding: 10em 5em;
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	grid-gap: 4em;
+	@media (--tablet) {
+		grid-template-columns: 1fr;
+	}
+	@media (--mobile) {
+		padding: 10em 2em;
+	}
+	& .informacion{
+		background: var(--oscuro);
+		color: white;
+		padding: 2em 3em;
+		border-radius: 5px;
+		@media (--mobile) {
+			display: none;
+		}
+		& .title{
+			font-family: var(--fuenteTitle);
+			margin-top: 0;
+		}
+		& ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		& .contact{
+			margin-top: 2em;
+			& .item{
+				margin-bottom: 2em;
+				& .icono{
+					margin-right: 1em;
+					font-size: 2rem;
+				}
+				& .info{
+					margin-right: 1em;
+					font-size: 1.2rem;
+				}
+			}
+		}
+		& .social{
+			display: flex;
+			margin-top: 4em;
+			& .item{
+				& a{
+					color: white;
+					font-size: 2rem;
+					margin-right: 2em;
+				}
+			}
+		}
+	}
+	& .contacto{
+		padding-right: 4em;
+		grid-row: 1;
+		@media (--mobile) {
+			padding: 0;
+		}
+		& .title{
+			font-family: var(--fuenteTitle);
+			color: var(--oscuro);
+			font-size: 2.5rem;
+		}
+		& .call{
+			font-family: var(--fuenteText);
+			color: var(--gris);
+			font-weight: 600;
+		}
+		& .formulario{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			& .input{
+				margin-bottom: 1em;
+				width: 90%;
+				font-family: var(--fuenteText);
+				border: none;
+				border-bottom: 1px solid var(--gris);
+				padding: 1em;
+				color: var(--gris);
+				font-size: 1rem;
+				&:focus{
+					color: var(--azul);
+					border-bottom-color: var(--azul);
+					box-shadow: none;
+					outline: none;
+					&::placeholder{
+						color: var(--azul);
+					}
+
+				}
+			}
+			& textarea{
+				width: 95%;
+				border: none;
+				background: #efefef;
+				padding: 2em;
+				font-family: var(--fuenteText);
+				border-radius: 1em;
+				font-size: 1rem;
+				box-sizing: border-box;
+				margin: 1em 0 3em;
+				&:focus{
+					color: var(--azul);
+					border-bottom-color: var(--azul);
+					box-shadow: none;
+					outline: none;
+					&::placeholder{
+						color: var(--azul);
+					}
+
+				}
+			}
+			& .btn{
+				@apply --btn;
+				font-family: var(--fuenteText);
+				border: none;
+				width: 70%;
+				padding: 1.5em;
+				box-sizing: border-box;
+
+			}
+
+		}
+	}
+}
