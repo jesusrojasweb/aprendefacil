@@ -170,8 +170,8 @@ body{
 	}
 	& .contacto{
 		padding-right: 4em;
-		grid-row: 1;
 		@media (--mobile) {
+			grid-row: 1;
 			padding: 0;
 		}
 		& .title{
