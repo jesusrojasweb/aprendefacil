@@ -34,12 +34,13 @@ body{
 	display: grid;
 	grid-template-areas: "header header"
 						 "nav clases";
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 1fr 4fr;
 }
 body > .header{
 	background: var(--masOscuro);
 	display: flex;
 	grid-area: header;
+	z-index: 1000;
 	& .logo{
 		width: 20%;
 		text-align: center;
@@ -97,11 +98,11 @@ body > .header{
 	padding: 0;
 	background: var(--oscuro);
 	list-style: none;
-	padding: 2em 3em;
-	position: absolute;
+	padding: 2em 1em;
 	height: 100%;
 	box-sizing: border-box;
 	grid-area: nav;
+	z-index: 999;
 	& .item{
 		margin-bottom: 1em;
 		& a{
@@ -146,4 +147,141 @@ body > .header{
 }
 .Clases{
 	grid-area: clases;
+	background: #f3f3f3;
+	padding: 2em 4em;
+	& .materias{
+		display: flex;
+		list-style: none;
+		& .materia{
+			margin-right: 1em;
+			& a{
+				font-family: var(--fuenteText);
+				color: var(--gris);
+				text-decoration: none;
+				padding: 1em 2em;
+				border-radius: 3em;
+				transition: .3s;
+				&:hover{
+					color: var(--azul);
+				}
+			}
+			&.active{
+				& a{
+					background: var(--azul);
+					color: white;
+				}
+			}
+		}
+	}
+	& .contenedor{
+		padding-top: 3em;
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-gap: 1em;
+		padding-bottom: 2em;
+		& .item{
+			background: white;
+			border-radius: 5px;
+			text-decoration: none;
+			color: var(--gris);
+			padding: 1em 2em;
+			transition: .3s;
+			border: 2px solid white;
+			& .header{
+				& .materia{
+					margin: 0;
+					text-transform: uppercase;
+					margin-bottom: .5em;
+					font-size: .9rem;
+				}
+				& .nombre{
+					margin: 0;
+					color: var(--oscuro);
+					border-bottom: 1px solid var(--gris);
+					padding-bottom: 1em;
+				}
+			}
+			& .body{
+				border-bottom: 1px solid var(--gris);
+			}
+			& .footer{
+				padding: 1em 0;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				align-items: center;
+				& .video{
+					padding-right: 1em;
+					border-right: 1px solid var(--gris);
+					& .icono{
+						color: var(--oscuro);
+						border-radius: 50%;
+						border: 3px solid var(--claro);
+						text-align: center;
+						padding: .5em .5em .5em .6em;
+						margin-right: 1em;
+					}
+					& .tiempo{
+						font-size: .8rem;
+					}
+				}
+				& .profesor{
+					padding-left: 1em;
+					& .icono{
+						background: #f3f3f3;
+						color: var(--gris);
+						padding: .5em;
+						border-radius: 50%;
+						font-size: 1rem;
+						margin-right: 1em;
+					}
+					& .nombre{
+						font-size: .8rem;
+					}
+				}
+			}
+			&:hover{
+				border: 2px solid var(--verde);
+			}
+			&.texto{
+				& .footer{
+					& .boton{
+						border-right: 1px solid var(--gris);
+						& .btn{
+							color: white;
+							background: var(--verde);
+							border-radius: 2em;
+							text-align: center;
+							padding: .5em 1em;	
+						}
+					}
+				}
+			}
+			&.documento{
+				& .footer{
+					grid-template-columns: 1fr 2fr;
+					& > .tipo{
+						& .extencion{
+							background: var(--naranja);
+							color: white;
+							padding: 1em .7em;
+							border-radius: 50%;
+						}
+					}
+					& .accion{
+						display: flex;
+						flex-direction: column;
+						& .tipo{
+							& span{
+								font-weight: 600;
+							}
+						}
+						& .descargar{
+							font-size: .9rem;
+							color: var(--verde);
+						}
+					}
+				}
+			}
+		}
+	}
 }

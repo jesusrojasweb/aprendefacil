@@ -57,7 +57,7 @@ body
 			li.materia
 				a(href="#") Ingles
 		.contenedor
-			.item.clase
+			a(href="#").item.clase
 				.header
 					h4.materia Derivadas
 					h3.nombre Derivadas logaritmicas
@@ -65,12 +65,12 @@ body
 					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quaerat atque dicta!
 				.footer
 					.video
-						span.fas.fa-play
+						span.fas.fa-play.icono
 						span.tiempo 10min
 					.profesor
-						span.far.fa-user
-						span.nombre Nombre Apellido
-			.item.clase
+						span.far.fa-user.icono
+						span.nombre Nombre
+			a(href="#").item.clase
 				.header
 					h4.materia Derivadas
 					h3.nombre Derivadas logaritmicas
@@ -78,12 +78,12 @@ body
 					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quaerat atque dicta!
 				.footer
 					.video
-						span.fas.fa-play
+						span.fas.fa-play.icono
 						span.tiempo 10min
 					.profesor
-						span.far.fa-user
-						span.nombre Nombre Apellido
-			.item.clase
+						span.far.fa-user.icono
+						span.nombre Nombre
+			a(href="#").item.clase
 				.header
 					h4.materia Derivadas
 					h3.nombre Derivadas logaritmicas
@@ -91,12 +91,12 @@ body
 					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quaerat atque dicta!
 				.footer
 					.video
-						span.fas.fa-play
+						span.fas.fa-play.icono
 						span.tiempo 10min
 					.profesor
-						span.far.fa-user
-						span.nombre Nombre Apellido
-			.item.clase
+						span.far.fa-user.icono
+						span.nombre Nombre
+			a(href="#").item.clase
 				.header
 					h4.materia Derivadas
 					h3.nombre Derivadas logaritmicas
@@ -104,12 +104,12 @@ body
 					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quaerat atque dicta!
 				.footer
 					.video
-						span.fas.fa-play
+						span.fas.fa-play.icono
 						span.tiempo 10min
 					.profesor
-						span.far.fa-user
-						span.nombre Nombre Apellido
-			.item.texto
+						span.far.fa-user.icono
+						span.nombre Nombre
+			a(href="#").item.texto
 				.header
 					h4.materia Derivadas
 					h3.nombre Derivadas logaritmicas
@@ -117,11 +117,11 @@ body
 					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quaerat atque dicta!
 				.footer
 					.boton
-						a.btn(href="#") Ver Clase
+						span.btn Ver Clase
 					.profesor
-						span.far.fa-user
-						span.nombre Nombre Apellido
-			.item.documento
+						span.far.fa-user.icono
+						span.nombre Nombre
+			a(href="#").item.documento
 				.header
 					h4.materia Derivadas
 					h3.nombre Derivadas logaritmicas
@@ -130,6 +130,6 @@ body
 				.footer
 					.tipo
 						span.extencion .PDF
-					.profesor
-						span.far.fa-user
-						span.nombre Nombre Apellido
+					.accion
+						span.tipo!= "Archivo <span>(2 MB)</span>"
+						span.descargar Descargar
