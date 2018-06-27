@@ -119,10 +119,20 @@ body{
 	display: grid;
 	grid-template-columns: 2fr 3fr;
 	grid-gap: 4em;
+	@media (--tablet) {
+		grid-template-columns: 1fr;
+	}
+	@media (--mobile) {
+		padding: 10em 2em;
+	}
 	& .informacion{
 		background: var(--oscuro);
 		color: white;
 		padding: 2em 3em;
+		border-radius: 5px;
+		@media (--mobile) {
+			display: none;
+		}
 		& .title{
 			font-family: var(--fuenteTitle);
 			margin-top: 0;
@@ -160,6 +170,10 @@ body{
 	}
 	& .contacto{
 		padding-right: 4em;
+		grid-row: 1;
+		@media (--mobile) {
+			padding: 0;
+		}
 		& .title{
 			font-family: var(--fuenteTitle);
 			color: var(--oscuro);
