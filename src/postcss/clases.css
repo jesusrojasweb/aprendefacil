@@ -1,0 +1,33 @@
+:root{
+	--fuenteTitle: 'Fredoka One', system-ui;
+	--fuenteSubTitle: 'Ubuntu', system-ui;
+	--fuenteText: 'Montserrat', system-ui;
+
+	--azul: #00acff;
+	--verde: #89da59;
+	--naranja: #fc8403;
+	--oscuro: #0d242f;
+	--gris: #9e9e9e;
+	--masOscuro: #091c23;
+	--claro: #afafaf;
+
+	--btn:{
+		color: white;
+		background: var(--azul);
+		border-radius: 2em;
+		padding: 1em 2em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+};
+@custom-media --tablet (width < 800px);
+@custom-media --mobile (width < 500px);
+body{
+	font-family: 'Fredoka One', system-ui;
+	font-family: 'Ubuntu', system-ui;
+	font-family: 'Montserrat', system-ui;
+	margin: 0;
+	overflow-x: hidden;
+}
