@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+html(lang="es")
+head
+	meta(charset="UTF-8")
+	title Clases
+	meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+	link(rel="stylesheet", href="css/fontawesome-all.min.css")
+	link(rel="stylesheet", href="css/clases.css")
+body
+	header.header
+		a(href="/").logo
+				img.img(src="img/logo.png", alt="logo")
+		.button
+			button.fas.fa-bars
+		nav.navbar
+			
+			h1.seccion Clases
+			a.btn(href="#") Subir archivo
+			ul.config
+				li.item
+					a(href="#")
+						span.icono.fas.fa-search
+				li.item
+					a(href="#")
+						span.icono.fas.fa-envelope
+				li.item
+					a(href="#")
+						span.icono.fas.fa-cog
+			a(href="#").perfil
+				span.fas.fa-user
+	ul.navigation
+		button.left
+			span.fas.fa-angle-right
+		li.item.active
+			a(href="#")
+				span.icono.fas.fa-book
+				span.tipo Clases
+		li.item
+			a(href="#")
+				span.icono.far.fa-chart-bar
+				span.tipo Examenes
+		li.item
+			a(href="#")
+				span.icono.far.fa-user
+				span.tipo Carreras
+		li.item
+			a(href="#")
+				span.icono.far.fa-file-alt
+				span.tipo Documentos
+		li.item
+			a(href="#")
+				span.icono.far.fa-calendar
+				span.tipo Calendario
+		p.copy!= "&copy; Diseño y Desarollo por <a href='http://jesusrojas.com.ve' target='_blank'>Jesús Rojas<a>"
+	section.Clases
+		ul.materias
+			li.materia.active
+				a(href="#") Matematica
+			li.materia
+				a(href="#") Fisica
+			li.materia
+				a(href="#") Ingles
+		.contenedor
+			a(href="#").item.clase
+				.header
+					h4.materia Derivadas
+					h3.nombre Derivadas logaritmicas
+				.body
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quaerat atque dicta!
+				.footer
+					.video
+						span.fas.fa-play.icono
+						span.tiempo 10min
+					.profesor
+						span.far.fa-user.icono
+						span.nombre Nombre
+			a(href="#").item.clase
+				.header
+					h4.materia Derivadas
+					h3.nombre Derivadas logaritmicas
+				.body
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quaerat atque dicta!
+				.footer
+					.video
+						span.fas.fa-play.icono
+						span.tiempo 10min
+					.profesor
+						span.far.fa-user.icono
+						span.nombre Nombre
+			a(href="#").item.clase
+				.header
+					h4.materia Derivadas
+					h3.nombre Derivadas logaritmicas
+				.body
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quaerat atque dicta!
+				.footer
+					.video
+						span.fas.fa-play.icono
+						span.tiempo 10min
+					.profesor
+						span.far.fa-user.icono
+						span.nombre Nombre
+			a(href="#").item.clase
+				.header
+					h4.materia Derivadas
+					h3.nombre Derivadas logaritmicas
+				.body
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quaerat atque dicta!
+				.footer
+					.video
+						span.fas.fa-play.icono
+						span.tiempo 10min
+					.profesor
+						span.far.fa-user.icono
+						span.nombre Nombre
+			a(href="#").item.texto
+				.header
+					h4.materia Derivadas
+					h3.nombre Derivadas logaritmicas
+				.body
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quaerat atque dicta!
+				.footer
+					.boton
+						span.btn Ver Clase
+					.profesor
+						span.far.fa-user.icono
+						span.nombre Nombre
+			a(href="#").item.documento
+				.header
+					h4.materia Derivadas
+					h3.nombre Derivadas logaritmicas
+				.body
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quaerat atque dicta!
+				.footer
+					.tipo
+						span.extencion .PDF
+					.accion
+						span.tipo!= "Archivo <span>(2 MB)</span>"
+						span.descargar Descargar
