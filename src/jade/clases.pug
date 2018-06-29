@@ -10,9 +10,9 @@ body
 	header.header
 		a(href="/").logo
 				img.img(src="img/logo.png", alt="logo")
-		.button
+		.button#burguer
 			button.fas.fa-bars
-		nav.navbar
+		nav.navbar#menu
 			
 			h1.seccion Clases
 			a.btn(href="#") Subir archivo
@@ -28,8 +28,8 @@ body
 						span.icono.fas.fa-cog
 			a(href="#").perfil
 				span.fas.fa-user
-	ul.navigation
-		button.left
+	ul.navigation#navigation
+		button.left#left
 			span.fas.fa-angle-right
 		li.item.active
 			a(href="#")
@@ -137,3 +137,4 @@ body
 					.accion
 						span.tipo!= "Archivo <span>(2 MB)</span>"
 						span.descargar Descargar
+	script(src="js/clases.js")

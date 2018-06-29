@@ -76,6 +76,7 @@ body > .header{
 			border: none;
 			color: var(--azul);
 			font-size: 2rem;
+			outline: none;
 		}
 		@media (--mobile){
 			display: flex;
@@ -246,6 +247,7 @@ body > .header{
 		padding: .5em;
 		transition: .3s;
 		display: none;
+		outline: none;
 		@media (--tablet){
 			display: block;
 			right: -7.5%;
