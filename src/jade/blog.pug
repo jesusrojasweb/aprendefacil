@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+html(lang="es")
+head
+	meta(charset="UTF-8")
+	title Blog
+	meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+	link(rel="stylesheet", href="css/fontawesome-all.min.css")
+	link(rel="stylesheet", href="css/blog.css")
+body
+	section.Hero
+		.contenedor
+			header.header
+				nav.navbar
+					figure.logo
+						img.img(src="img/logo.png", alt="logo")
+					ul.menu#menu
+						li.item
+							a(href="index.html") Inicio
+						li.item
+							a(href="clases.html") Clases
+						li.item
+							a(href="#") Categorias
+						li.item
+							a(href="contacto.html") Contacto
+					.boton
+						a.btn(href="login.html") Iniciar Sesión
+					.burger
+						button.fa.fa-bars#button
+
+			.copy
+				h1.title Aprende los tips y consejos de expertos en tu campo
+				p.call ¿Quieres ser excelente y saber esos trucos para ser un gran profesional? En nuestros post encontraras materiales para lograr eso y más
+	
+	section.Posts
+		.contenedor
+			.item
+				.header
+					img.img(src="img/curso-01.jpg", alt="blog")
+				.body
+					h4.categoria Categoria
+					h2.titulo Titulo del post que se va a mostrar
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+			.item
+				.header
+					img.img(src="img/curso-02.jpg", alt="blog")
+				.body
+					h4.categoria Categoria
+					h2.titulo Titulo del post que se va a mostrar
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+			.promocion
+				h2.titulo Titulo del post que se va a mostrar
+				p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+				img.img(src="img/curso-01.jpg", alt="blog")
+			aside.populares
+				h3.populares Más populares
+				.item
+					.h4.categoria Categoria
+					h2.titulo Titulo del post que se va a mostrar
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+				.item
+					.h4.categoria Categoria
+					h2.titulo Titulo del post que se va a mostrar
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+				.item
+					.h4.categoria Categoria
+					h2.titulo Titulo del post que se va a mostrar
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+				.item
+					.h4.categoria Categoria
+					h2.titulo Titulo del post que se va a mostrar
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+			.item
+				.header
+					img.img(src="img/curso-03.jpg", alt="blog")
+				.body
+					h4.categoria Categoria
+					h2.titulo Titulo del post que se va a mostrar
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+			.item
+				.header
+					img.img(src="img/curso-01.jpg", alt="blog")
+				.body
+					h4.categoria Categoria
+					h2.titulo Titulo del post que se va a mostrar
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+			.item
+				.header
+					img.img(src="img/curso-02.jpg", alt="blog")
+				.body
+					h4.categoria Categoria
+					h2.titulo Titulo del post que se va a mostrar
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+			.call
+				h2.title ¿Quieres formar parte de nuestro equipo?
+				a.btn(href="#") Llena el formulario
+			.item
+				.header
+					img.img(src="img/curso-03.jpg", alt="blog")
+				.body
+					h4.categoria Categoria
+					h2.titulo Titulo del post que se va a mostrar
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+			.item
+				.header
+					img.img(src="img/curso-01.jpg", alt="blog")
+				.body
+					h4.categoria Categoria
+					h2.titulo Titulo del post que se va a mostrar
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+			.item
+				.header
+					img.img(src="img/curso-02.jpg", alt="blog")
+				.body
+					h4.categoria Categoria
+					h2.titulo Titulo del post que se va a mostrar
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque nobis quo et ducimus. Porro, minima, facilis. Explicabo, iure.
+
+	footer.footer
+		.body
+			.item
+				img.img(src="img/logo-expand.png", alt="logo")
+				p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla quia architecto esse optio doloremque similique
+			.item
+				h3.title Más Información
+				ul.info
+					li.item
+						a(href="contacto.html") Contacto
+					li.item
+						a(href="#") Blog
+					li.item
+						a(href="registro.html") Crear Cuenta
+					li.item
+						a(href="login.html") Iniciar Sesión
+			.item
+				h3.title Sociales
+				ul.social
+					li.item
+						a(href="#")
+							span.fab.fa-facebook
+					li.item
+						a(href="#")
+							span.fab.fa-twitter
+					li.item
+						a(href="#")
+							span.fab.fa-instagram
+		.copy
+			p!= "&copy; Copyright 2018. diseño y Desarollo por <a href='http://jesusrojas.com.ve' target='_blank'>Jesús Rojas<a>"
