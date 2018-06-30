@@ -1,0 +1,45 @@
+@import 'estilos.css';
+:root{
+	--fuenteTitle: 'Fredoka One', system-ui;
+	--fuenteSubTitle: 'Ubuntu', system-ui;
+	--fuenteText: 'Montserrat', system-ui;
+
+	--azul: #00acff;
+	--verde: #89da59;
+	--naranja: #fc8403;
+	--oscuro: #0d242f;
+	--gris: #9e9e9e;
+	--masOscuro: #091c23;
+	--claro: #afafaf;
+
+	--btn:{
+		color: white;
+		background: var(--azul);
+		border-radius: 2em;
+		padding: 1em 2em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+};
+@custom-media --tablet (width < 800px);
+@custom-media --mobile (width < 500px);
+img{
+	width: 50%;
+}
+.Hero{
+	& .contenedor{
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#005075+0,00161e+74,00161e+100&0.8+0,0.9+74,1+100 */
+		background: -moz-linear-gradient(top, rgba(0,80,117,0.8) 0%, rgba(0,22,30,0.9) 60%, rgba(0,22,30,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(0,80,117,0.8) 0%,rgba(0,22,30,0.9) 60%,rgba(0,22,30,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(0,80,117,0.8) 0%,rgba(0,22,30,0.9) 60%,rgba(0,22,30,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc005075', endColorstr='#00161e',GradientType=0 ); /* IE6-9 */
+		& .copy{
+			& .title{
+				color: var(--naranja);
+				width: 80%;
+			}
+		}
+	}
+}
