@@ -1,16 +1,16 @@
 const gulp = require('gulp'),
   pug = require('gulp-pug'),
-	postcss = require('gulp-postcss'),
-	  cssnext = require('postcss-cssnext'),
-	  atImport = require('postcss-import'),
-	  cssnano = require('cssnano'),
-	  mqpacker = require('css-mqpacker'),
+  postcss = require('gulp-postcss'),
+    cssnext = require('postcss-cssnext'),
+    atImport = require('postcss-import'),
+    cssnano = require('cssnano'),
+    mqpacker = require('css-mqpacker'),
     fontMagician = require('postcss-font-magician'),
-	browserSync = require('browser-sync').create()
+  browserSync = require('browser-sync').create()
 
 // Servidor de desarrollo
 gulp.task('serve', () => {
-	browserSync.init({
+  browserSync.init({
     server: './'
   });
  })
@@ -31,6 +31,10 @@ gulp.task('css', (e)=>{
             '400': [],
             '600': [],
             '700': [],
+          },
+          'Playfair Display': {
+            '400': [],
+            '700': []
           }
         }
       }),
@@ -51,7 +55,7 @@ gulp.task('watch', ()=>{
   gulp.watch('./src/postcss/*.css', ['css'])
   gulp.watch('./*.html').on('change', browserSync.reload)
   gulp.watch('./src/jade/*.pug', ['pug'])
-	gulp.watch('./js/*.js').on('change', browserSync.reload)
+  gulp.watch('./js/*.js').on('change', browserSync.reload)
 })
 gulp.task('pug', ()=>{
   gulp.src('./src/jade/*.pug')
