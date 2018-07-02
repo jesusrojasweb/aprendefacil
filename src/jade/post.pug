@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+html(lang="es")
+head
+	meta(charset="UTF-8")
+	title Titulo del post que se va a mostrar
+	meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+	link(rel="stylesheet", href="css/fontawesome-all.min.css")
+	link(rel="stylesheet", href="css/post.css")
+body
+	section.Hero
+		.imagen
+			.contenedor
+				header.header
+					nav.navbar
+						figure.logo
+							img.img(src="img/logo.png", alt="logo")
+						ul.menu#menu
+							li.item
+								a(href="index.html") Inicio
+							li.item
+								a(href="clases.html") Clases
+							li.item
+								a(href="#") Categorias
+							li.item
+								a(href="contacto.html") Contacto
+						.boton
+							a.btn(href="login.html") Iniciar Sesión
+						.burger
+							button.fa.fa-bars#button
+				.escritor
+						.foto
+							span.fas.fa-user
+						.informacion
+							h3.nombre Nombre Apellido
+							p.articulos Nº articulo
+
+		.copy
+			h1.title Titulo del post que se va a mostrar
+			.escritor
+				.informacion
+					span.comentarios Nº comentarios
+					span.tiempo 10 minutos atras
+				
+	section.post
+		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo adipisci, dolor nulla, aut quas, unde repellendus, tempora aperiam sapiente vitae culpa in dicta modi. Omnis impedit, corporis ad quia.
+		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolorum illo explicabo iusto doloremque cumque, molestias odit modi, quae obcaecati error, quos ex rem! Suscipit, expedita! Maxime, consequuntur architecto.
+		.foto
+			img.img(src="img/bg-login.jpg", alt="graduacion")
+		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur repudiandae ipsa autem vitae accusantium nesciunt, fugiat repellendus eveniet debitis magnam praesentium. Consequuntur!
+		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis consectetur voluptatibus, dolorem illo ipsa beatae pariatur inventore aperiam.
+		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo saepe assumenda nihil libero. Non suscipit, ea nisi adipisci cumque pariatur excepturi molestiae, porro molestias reiciendis earum. Sunt autem, quibusdam eaque.
+		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis eius sequi sit cumque modi neque libero, ab maxime possimus quisquam provident laudantium, accusantium illo magni voluptatibus eligendi, praesentium quos repellendus.
+		p  Lorem ipsum dolor sit amet, consectetur.
+		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea id expedita incidunt error illo deleniti iusto recusandae consequatur labore magnam officiis unde sed deserunt sint quos, est totam, aspernatur quod!
+		.foto
+			img.img(src="img/bg-singin.jpg", alt="escribir")
+	footer.footer
+		.body
+			.item
+				img.img(src="img/logo-expand.png", alt="logo")
+				p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla quia architecto esse optio doloremque similique
+			.item
+				h3.title Más Información
+				ul.info
+					li.item
+						a(href="contacto.html") Contacto
+					li.item
+						a(href="#") Blog
+					li.item
+						a(href="registro.html") Crear Cuenta
+					li.item
+						a(href="login.html") Iniciar Sesión
+			.item
+				h3.title Sociales
+				ul.social
+					li.item
+						a(href="#")
+							span.fab.fa-facebook
+					li.item
+						a(href="#")
+							span.fab.fa-twitter
+					li.item
+						a(href="#")
+							span.fab.fa-instagram
+		.copy
+			p!= "&copy; Copyright 2018. diseño y Desarollo por <a href='http://jesusrojas.com.ve' target='_blank'>Jesús Rojas<a>"
+	
+	
