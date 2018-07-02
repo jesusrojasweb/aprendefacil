@@ -1,6 +1,7 @@
 @import 'blog.css';
 :root{
 	--fuenteTitle: 'Fredoka One', system-ui;
+	--fuentePost: 'Playfair Display', system-ui;
 	--fuenteSubTitle: 'Ubuntu', system-ui;
 	--fuenteText: 'Montserrat', system-ui;
 
@@ -25,3 +26,69 @@
 };
 @custom-media --tablet (width < 800px);
 @custom-media --mobile (width < 500px);
+body{
+	font-family: 'Playfair Display', system-ui;
+	font-family: var(--fuenteText);
+}
+.Hero{
+	& .contenedor{
+		& .copy{
+			text-align: left;
+			justify-content: flex-end;
+			width: 65%;
+			align-items: flex-start;
+			margin: 0 auto;
+			padding-bottom: 2em;
+			height: 70vh;
+			& .title{
+				width: 100%;
+				text-transform: none;
+				color: white;
+				font-size: 5rem;
+				font-weight: normal;
+				font-family: var(--fuentePost);
+			}
+			& .escritor{
+				display: grid;
+				grid-template-columns: 1fr 3fr;
+				grid-gap: 1em;
+				align-items: center;
+				& .foto{
+					justify-self: center;
+					& span{
+						color: var(--gris);
+						background: white;
+						font-size: 3rem;
+						padding: .5em;
+						border-radius: 50%;
+					}
+				}
+				& .informacion{
+					font-family: var(--fuenteText);
+					& .articulos, & .comentarios, & .tiempo{
+						color: var(--gris);
+					}
+					& .comentarios{
+						margin-right: 1em;
+					}
+				}
+			}
+		}
+	}
+}
+.post{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3em 0 7em;
+	& p{
+		width: 70%;
+		font-size: 1.2rem;
+		font-family: var(--fuentePost);
+	}
+	& .foto{
+		width: 80%;
+		height: 500px;
+		overflow: hidden;
+	}
+}
