@@ -31,49 +31,116 @@ body{
 	font-family: var(--fuenteText);
 }
 .Hero{
+	background: none;
+	display: grid;
+	& .imagen{
+		background: url(../img/bg.jpg) 50% no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		grid-row: 1;
+		grid-column: 1;
+	}
 	& .contenedor{
-		& .copy{
-			text-align: left;
-			justify-content: flex-end;
-			width: 65%;
-			align-items: flex-start;
-			margin: 0 auto;
-			padding-bottom: 2em;
-			height: 70vh;
-			& .title{
-				width: 100%;
-				text-transform: none;
-				color: white;
-				font-size: 5rem;
-				font-weight: normal;
-				font-family: var(--fuentePost);
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-bottom: 2em;
+		& .escritor{
+			display: grid;
+			margin-left: 15em;
+			grid-template-columns: 1fr 2fr;
+			width: 30%;
+			margin-bottom: 1em;
+			
+			@media (--tablet) {
+				margin: 4em 4em 2em;
+				width: 50%;
 			}
-			& .escritor{
-				display: grid;
-				grid-template-columns: 1fr 3fr;
-				grid-gap: 1em;
+			@media (--mobile) {
+				margin: 4em 2em 2em;
+				width: 70%;
 				align-items: center;
-				& .foto{
-					justify-self: center;
-					& span{
-						color: var(--gris);
-						background: white;
-						font-size: 3rem;
-						padding: .5em;
-						border-radius: 50%;
+
+			}
+			& .foto{
+				& span{
+					color: var(--gris);
+					background: white;
+					font-size: 3rem;
+					padding: .5em;
+					border-radius: 50%;
+					@media (--mobile) {
+						font-size: 2rem;
 					}
 				}
-				& .informacion{
-					font-family: var(--fuenteText);
-					& .articulos, & .comentarios, & .tiempo{
-						color: var(--gris);
-					}
-					& .comentarios{
-						margin-right: 1em;
-					}
+			}
+			& .informacion{
+				font-family: var(--fuenteText);
+				& .nombre{
+					color: white;
+				}
+				& .articulos{
+					color: var(--gris);
 				}
 			}
 		}
+	}
+	& .copy{
+	    grid-row: 1;
+	    grid-column: 1;
+	    margin-left: 20%;
+	    display: grid;
+	    align-items: end;
+	    text-align: left;
+	    padding-bottom: 0;
+	    grid-template-columns: 1fr;
+	    @media (--tablet) {
+	    	grid-row: 2;
+	    	color: black;
+	    	margin: 0 4em;
+	    	padding: 0;
+	    	display: flex;
+	    	height: auto;
+	    	flex-direction: column;
+	    	& .title{
+	    		width: 100%;
+	    		color: var(--masOscuro);
+	    	}
+	    	& .escritor{
+	    		margin: 1em 0;
+	    	}
+	    }
+	    @media (--mobile) {
+	    	margin: 0 2em;
+	    }
+	    & .title{
+	    	font-family: var(--fuentePost);
+	    	text-transform: none;
+	    	font-size: 4rem;
+	    	width: 80%;
+	    }
+	    & .escritor{
+	    	margin-left: 6.6em;
+	    	margin-top: 1em;
+	    	color: var(--gris);
+	    	& .informacion{
+	    		& .comentarios{
+	    			margin-right: 2em;
+	    			position: relative;
+	    			&:before{
+	    				content: '';
+						position: absolute;
+						width: 7px;
+						height: 7px;
+						background: var(--gris);
+						border-radius: 50%;
+						right: calc(7px - 1.7em);
+						top: 40%;
+	    			}
+	    		}
+	    	}
+	    }
 	}
 }
 .post{
@@ -81,14 +148,28 @@ body{
 	flex-direction: column;
 	align-items: center;
 	padding: 3em 0 7em;
+	@media (--mobile) {
+		padding-top: 0;
+	}
 	& p{
 		width: 70%;
 		font-size: 1.2rem;
 		font-family: var(--fuentePost);
+		color: var(--masOscuro);
+		@media (--tablet) {
+			width: 80%;
+		}
+		@media (--mobile) {
+			width: 90%;
+		}
 	}
 	& .foto{
 		width: 80%;
 		height: 500px;
 		overflow: hidden;
+		@media (--mobile) {
+			width: 100%;
+			height: auto;
+		}
 	}
 }

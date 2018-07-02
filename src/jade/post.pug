@@ -8,35 +8,39 @@ head
 	link(rel="stylesheet", href="css/post.css")
 body
 	section.Hero
-		.contenedor
-			header.header
-				nav.navbar
-					figure.logo
-						img.img(src="img/logo.png", alt="logo")
-					ul.menu#menu
-						li.item
-							a(href="index.html") Inicio
-						li.item
-							a(href="clases.html") Clases
-						li.item
-							a(href="#") Categorias
-						li.item
-							a(href="contacto.html") Contacto
-					.boton
-						a.btn(href="login.html") Iniciar Sesión
-					.burger
-						button.fa.fa-bars#button
-
-			.copy
-				h1.title Titulo del post que se va a mostrar
+		.imagen
+			.contenedor
+				header.header
+					nav.navbar
+						figure.logo
+							img.img(src="img/logo.png", alt="logo")
+						ul.menu#menu
+							li.item
+								a(href="index.html") Inicio
+							li.item
+								a(href="clases.html") Clases
+							li.item
+								a(href="#") Categorias
+							li.item
+								a(href="contacto.html") Contacto
+						.boton
+							a.btn(href="login.html") Iniciar Sesión
+						.burger
+							button.fa.fa-bars#button
 				.escritor
-					.foto
-						span.fas.fa-user
-					.informacion
-						h3.nombre Nombre Apellido
-						p.articulos Nº articulo
-						span.comentarios Nº comentarios
-						span.tiempo 10 minutos atras
+						.foto
+							span.fas.fa-user
+						.informacion
+							h3.nombre Nombre Apellido
+							p.articulos Nº articulo
+
+		.copy
+			h1.title Titulo del post que se va a mostrar
+			.escritor
+				.informacion
+					span.comentarios Nº comentarios
+					span.tiempo 10 minutos atras
+				
 	section.post
 		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo adipisci, dolor nulla, aut quas, unde repellendus, tempora aperiam sapiente vitae culpa in dicta modi. Omnis impedit, corporis ad quia.
 		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum atque dolorum illo explicabo iusto doloremque cumque, molestias odit modi, quae obcaecati error, quos ex rem! Suscipit, expedita! Maxime, consequuntur architecto.
